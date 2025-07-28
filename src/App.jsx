@@ -22,6 +22,7 @@ function App() {
   const [error, setError] = useState("");
 
   const API_KEY = "ff93c48c77fdfc01c8afc79b9cdb1485";
+
   // https://api.openweathermap.org/data/2.5/weather?q={city_Name}&appid={API key}
   // https://api.openweathermap.org/data/2.5/weather?lat=${s.lat}&lon=${s.lon}&appid={API_KEY}&units=metric
   // http://api.openweathermap.org/geo/1.0/direct?q={query}&limit=5&appid={API_KEY}
@@ -46,7 +47,7 @@ function App() {
     }
   };
 
-  // This will fetch data from url
+  // This will fetch data from url 
   const fetchWeatherData = async (url, name = "") => {
     setError("");
     setWeather(null);
@@ -65,7 +66,6 @@ function App() {
   };
 
   //This function prevent form submission validates city and fetches data via api key
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!city.trim()) return setError("Please enter a valid city name.");
