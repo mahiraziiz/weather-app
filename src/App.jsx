@@ -47,7 +47,7 @@ function App() {
     }
   };
 
-  // This will fetch data from url 
+  // This will fetch data from url
   const fetchWeatherData = async (url, name = "") => {
     setError("");
     setWeather(null);
